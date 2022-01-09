@@ -5,7 +5,7 @@
 
 /**
  *
- * @author User
+ * @author gombost84
  */
 
 import java.util.Scanner;

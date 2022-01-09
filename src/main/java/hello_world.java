@@ -5,7 +5,7 @@
 
 /**
  *
- * @author User
+ * @author gombost84
  */
 public class hello_world {
     public static void main(String[] args) {
