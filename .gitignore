@@ -24,3 +24,5 @@ hs_err_pid*
 
 # Virtual Studio Code folders
 .vscode/
+bin
+lib

@@ -1,10 +1,10 @@
-public class constructor {
+public class Constructor {
     private int maxInt;
     private int minInt;
     private String string;
     private boolean bool = true;
 
-    public constructor (int maxInt, int minInt, String string) {
+    public Constructor (int maxInt, int minInt, String string) {
         this.maxInt = maxInt;
         this.minInt = minInt;
         this.string = string;
