@@ -1,1 +1,1 @@
-# java-netbeans-practices
+# java-practices
