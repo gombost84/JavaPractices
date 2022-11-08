@@ -1,6 +1,8 @@
 import java.awt.GridLayout;
 import java.awt.Dimension;
 import java.awt.Color;
+import java.awt.event.*;
+import java.awt.*;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -13,6 +15,8 @@ public class TicTacToeWindow {
     private int windowHeight = 800;
     private int menuHeight = 20;
     private String name = "Tic Tac Toe";
+    TextField text = new TextField(20);
+    private int numClicks = 0;
 
     TicTacToeWindow() {
         
@@ -76,7 +80,19 @@ public class TicTacToeWindow {
     }
 
     private JButton TicTacToeButton() {
-        JButton button = new JButton();
+
+        JButton button = new JButton("Click me");
+        
+        button.add(text);
+        button.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                numClicks++;
+                text.setText("Button Clicked " + numClicks + " times");
+                
+            }
+        });
 
         return button;
     }
