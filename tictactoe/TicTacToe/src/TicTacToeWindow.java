@@ -15,7 +15,6 @@ public class TicTacToeWindow {
     private int windowHeight = 800;
     private int menuHeight = 20;
     private String name = "Tic Tac Toe";
-    TextField text = new TextField(20);
     private int numClicks = 0;
 
     TicTacToeWindow() {
@@ -81,15 +80,12 @@ public class TicTacToeWindow {
 
     private JButton TicTacToeButton() {
 
-        JButton button = new JButton("Click me");
+        JButton button = new JButton("Total number of clicks " + numClicks);
         
-        button.add(text);
-        button.addActionListener(new ActionListener() {
-
-            @Override
+        button.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
                 numClicks++;
-                text.setText("Button Clicked " + numClicks + " times");
+                button.setText("Total number of clicks " + numClicks);
                 
             }
         });
