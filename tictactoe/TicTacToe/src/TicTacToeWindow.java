@@ -15,7 +15,9 @@ public class TicTacToeWindow {
     private int windowHeight = 800;
     private int menuHeight = 20;
     private String name = "Tic Tac Toe";
-    private int numClicks = 0;
+    private String lastSymbol = "";
+    private String button1Text = "";
+    private String button2Text = "";
 
     TicTacToeWindow() {
         
@@ -28,7 +30,33 @@ public class TicTacToeWindow {
         frame.setJMenuBar(menu);
         
         JButton button1 = TicTacToeButton();
+        
+        button1.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+                if (button1Text.equals("") && lastSymbol.equals("")) {
+                button1.setText("X");
+                } else if (button1Text.equals("X")) {
+                    button1.setText("O");
+                } else if (button1Text.equals("O")) {
+                    button1.setText("X");
+                }
+            }
+        });
+
         JButton button2 = TicTacToeButton();
+        
+        button2.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+                if (button2Text.equals("")) {
+                    button2.setText("X");
+                } else if (button2Text.equals("X")) {
+                    button2.setText("O");
+                } else if (button2Text.equals("O")) {
+                    button2.setText("X");
+                }
+            }
+        });
+
         JButton button3 = TicTacToeButton();
         
         JButton button4 = TicTacToeButton();
@@ -80,15 +108,7 @@ public class TicTacToeWindow {
 
     private JButton TicTacToeButton() {
 
-        JButton button = new JButton("Total number of clicks " + numClicks);
-        
-        button.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                numClicks++;
-                button.setText("Total number of clicks " + numClicks);
-                
-            }
-        });
+        JButton button = new JButton("Click me");
 
         return button;
     }
