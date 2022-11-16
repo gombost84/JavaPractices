@@ -2,194 +2,48 @@ import java.awt.GridLayout;
 import java.awt.Dimension;
 import java.awt.Color;
 import java.awt.event.*;
-import java.awt.*;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenuBar;
 
-public class TicTacToeWindow {    
+public class TicTacToeWindow implements ActionListener {   
 
-    private Color menuColor = new Color(154, 165, 127);
-    private int windowWidth = 600;
-    private int windowHeight = 800;
-    private int menuHeight = 20;
-    private String name = "Tic Tac Toe";
-    private String lastSymbol = "";
-    private String button1Text = "";
-    private String button2Text = "";
-    private String button3Text = "";
-    private String button4Text = "";
-    private String button5Text = "";
-    private String button6Text = "";
-    private String button7Text = "";
-    private String button8Text = "";
-    private String button9Text = "";
+        private Color menuColor = new Color(154, 165, 127);
+        private int windowWidth = 600;
+        private int windowHeight = 800;
+        private int menuHeight = 20;
+        private String name = "Tic Tac Toe";
+        private String lastSymbol = "";
+        private String button1Text = "";
+        private String button2Text = "";
+        private String button3Text = "";
+        private String button4Text = "";
+        private String button5Text = "";
+        private String button6Text = "";
+        private String button7Text = "";
+        private String button8Text = "";
+        private String button9Text = "";
 
-    TicTacToeWindow() {
+        private JButton button1 = TicTacToeButton();
+        private JButton button2 = TicTacToeButton();
+        private JButton button3 = TicTacToeButton();
+        private JButton button4 = TicTacToeButton();
+        private JButton button5 = TicTacToeButton();
+        private JButton button6 = TicTacToeButton();
+        private JButton button7 = TicTacToeButton();
+        private JButton button8 = TicTacToeButton();
+        private JButton button9 = TicTacToeButton();
+
+        TicTacToeWindow() {
         
         GameWindow(TicTacToeFrame(windowWidth, windowHeight - menuHeight, name), TicTacToeMenuBar(windowWidth, menuHeight));
         
-    }
+    }    
 
     private JFrame GameWindow(JFrame frame, JMenuBar menu) {
         
         frame.setJMenuBar(menu);
-        
-        JButton button1 = TicTacToeButton();
-        
-        button1.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                switch (lastSymbol) {
-                    
-                    case "":
-                        button1Text = "X";
-                        button1.setText(button1Text);
-                        lastSymbol = button1Text;
-
-                    case "X":
-                        switch (button1Text) {
-                            case "":
-                                button1Text = "O";
-                                button1.setText(button1Text);
-                                lastSymbol = button1Text;
-                        }
-
-                    case "O":
-                        switch (button1Text) {
-                            case "":
-                                button1Text = "X";
-                                button1.setText(button1Text);
-                                lastSymbol = button1Text;
-                    }
-                }
-            }
-    });
-
-        JButton button2 = TicTacToeButton();
-        
-        button2.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                switch (lastSymbol) {
-                    
-                    case "":
-                        button2Text = "X";
-                        button2.setText(button2Text);
-                        lastSymbol = button2Text;
-
-                    case "X":
-                        switch (button2Text) {
-                            case "":
-                                button2Text = "O";
-                                button2.setText(button2Text);
-                                lastSymbol = button2Text;
-                        }
-
-                    case "O":
-                        switch (button2Text) {
-                            case "":
-                                button2Text = "X";
-                                button2.setText(button2Text);
-                                lastSymbol = button2Text;
-                    }
-                }
-            }
-    });
-
-        JButton button3 = TicTacToeButton();
-        
-        button3.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                switch (lastSymbol) {
-                    
-                    case "":
-                        button3Text = "X";
-                        button3.setText(button3Text);
-                        lastSymbol = button3Text;
-
-                    case "X":
-                        switch (button3Text) {
-                            case "":
-                                button3Text = "O";
-                                button3.setText(button3Text);
-                                lastSymbol = button3Text;
-                        }
-
-                    case "O":
-                        switch (button3Text) {
-                            case "":
-                                button3Text = "X";
-                                button3.setText(button3Text);
-                                lastSymbol = button3Text;
-                    }
-                }
-            }
-    });
-        
-        JButton button4 = TicTacToeButton();
-        
-        button4.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                switch (lastSymbol) {
-                    
-                    case "":
-                        button4Text = "X";
-                        button4.setText(button4Text);
-                        lastSymbol = button4Text;
-
-                    case "X":
-                        switch (button4Text) {
-                            case "":
-                                button4Text = "O";
-                                button4.setText(button4Text);
-                                lastSymbol = button4Text;
-                        }
-
-                    case "O":
-                        switch (button4Text) {
-                            case "":
-                                button4Text = "X";
-                                button4.setText(button4Text);
-                                lastSymbol = button4Text;
-                    }
-                }
-            }
-    });
-        JButton button5 = TicTacToeButton();
-        
-        button5.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                switch (lastSymbol) {
-                    
-                    case "":
-                        button5Text = "X";
-                        button5.setText(button5Text);
-                        lastSymbol = button5Text;
-
-                    case "X":
-                        switch (button5Text) {
-                            case "":
-                                button5Text = "O";
-                                button5.setText(button5Text);
-                                lastSymbol = button5Text;
-                        }
-
-                    case "O":
-                        switch (button5Text) {
-                            case "":
-                                button5Text = "X";
-                                button5.setText(button5Text);
-                                lastSymbol = button5Text;
-                    }
-                }
-            }
-    });
-        JButton button6 = TicTacToeButton();
-        
-        JButton button7 = TicTacToeButton();
-        JButton button8 = TicTacToeButton();
-        JButton button9 = TicTacToeButton();        
-
         frame.add(button1);
         frame.add(button2);
         frame.add(button3);
@@ -201,6 +55,16 @@ public class TicTacToeWindow {
         frame.add(button7);
         frame.add(button8);
         frame.add(button9);
+               
+        button1.addActionListener(this);                
+        button2.addActionListener(this);                
+        button3.addActionListener(this);
+        button4.addActionListener(this);
+        button5.addActionListener(this);
+        button6.addActionListener(this);
+        button7.addActionListener(this);
+        button8.addActionListener(this);
+        button9.addActionListener(this);
 
         return frame;
     }
@@ -234,5 +98,68 @@ public class TicTacToeWindow {
         JButton button = new JButton("Click me");
 
         return button;
+    }
+
+    private void buttonAction(JButton button, String buttonText) {
+        switch (lastSymbol) {
+            
+            case "":
+                buttonText = "X";
+                button.setText(buttonText);
+                lastSymbol = buttonText;
+
+            case "X":
+                switch (buttonText) {
+                    case "":
+                        buttonText = "O";
+                        button.setText(buttonText);
+                        lastSymbol = buttonText;
+                }
+
+            case "O":
+                switch (buttonText) {
+                    case "":
+                        buttonText = "X";
+                        button.setText(buttonText);
+                        lastSymbol = buttonText;
+            }
+        }
+
+    }
+    
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        
+        if (e.getSource() == button1) {
+            buttonAction(button1, button1Text);
+        } else if (e.getSource() == button2) {
+            buttonAction(button2, button2Text);                        
+        } else if (e.getSource() == button3) {
+            buttonAction(button3, button3Text);            
+        } else if (e.getSource() == button4) {
+            buttonAction(button4, button4Text);            
+        } else if (e.getSource() == button5) {
+            buttonAction(button5, button5Text);            
+        } else if (e.getSource() == button6) {
+            buttonAction(button6, button6Text);            
+        } else if (e.getSource() == button7) {
+            buttonAction(button7, button7Text);            
+        } else if (e.getSource() == button8) {
+            buttonAction(button8, button8Text);            
+        } else if (e.getSource() == button9) {
+            buttonAction(button9, button9Text);            
+        }
+
+        // switch (source) {
+        //     case "button1": buttonAction(button1, button1Text);
+        //     case "button2": buttonAction(button2, button2Text);
+        //     case "button3": buttonAction(button3, button3Text);
+        //     case "button4": buttonAction(button4, button4Text);
+        //     case "button5": buttonAction(button5, button5Text);
+        //     case "button6": buttonAction(button6, button6Text);
+        //     case "button7": buttonAction(button7, button7Text);
+        //     case "button8": buttonAction(button8, button8Text);
+        //     case "button9": buttonAction(button9, button9Text);
+        // }
     }
 }
