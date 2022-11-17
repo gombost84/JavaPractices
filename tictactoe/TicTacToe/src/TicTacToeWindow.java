@@ -41,16 +41,6 @@ public class TicTacToeWindow implements ActionListener {
         for (JButton jButton : buttonList) {
             frame.add(jButton);
         }
-               
-        buttonList[0].addActionListener(this);                
-        buttonList[1].addActionListener(this);                
-        buttonList[2].addActionListener(this);
-        buttonList[3].addActionListener(this);
-        buttonList[4].addActionListener(this);
-        buttonList[5].addActionListener(this);
-        buttonList[6].addActionListener(this);
-        buttonList[7].addActionListener(this);
-        buttonList[8].addActionListener(this);
 
         return frame;
     }
@@ -90,6 +80,16 @@ public class TicTacToeWindow implements ActionListener {
         JButton button7 = new JButton();
         JButton button8 = new JButton();
         JButton button9 = new JButton();
+        
+        button1.addActionListener(this);
+        button2.addActionListener(this);
+        button3.addActionListener(this);
+        button4.addActionListener(this);
+        button5.addActionListener(this);
+        button6.addActionListener(this);
+        button7.addActionListener(this);
+        button8.addActionListener(this);
+        button9.addActionListener(this);
 
         JButton[] array = {
             button1,
