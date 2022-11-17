@@ -26,7 +26,7 @@ public class TicTacToeWindow implements ActionListener {
             "",
             ""
         };
-        private JButton[] buttonList = TicTacToeButton();
+        private JButton[] buttonList = TicTacToeButtons();
 
         TicTacToeWindow() {
         
@@ -69,7 +69,7 @@ public class TicTacToeWindow implements ActionListener {
         return menuBar;
     }
 
-    private JButton[] TicTacToeButton() {
+    private JButton[] TicTacToeButtons() {
         
         JButton button1 = new JButton();
         JButton button2 = new JButton();
