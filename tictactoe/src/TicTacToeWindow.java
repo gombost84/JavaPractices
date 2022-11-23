@@ -34,24 +34,16 @@ public class TicTacToeWindow implements ActionListener {
         private JFrame windowFrame = frame.getFrame(); 
 
         TicTacToeWindow() {
-        
-        GameWindow(windowFrame, menuBar);
-        
-    }    
 
-    private JFrame GameWindow(JFrame frame, JMenuBar menu) {
-        
-        frame.setJMenuBar(menu);
+            windowFrame.setJMenuBar(menuBar);
 
-        for (JButton button : buttonList) {
-            frame.add(button);
-        }
-
-        for (JButton button : buttonList) {
-            button.addActionListener(this);
-        }
-
-        return frame;
+            for (JButton button : buttonList) {
+                windowFrame.add(button);
+            }
+    
+            for (JButton button : buttonList) {
+                button.addActionListener(this);
+            }        
     } 
 
     private void buttonAction(JButton button, int index, String[] array) {
