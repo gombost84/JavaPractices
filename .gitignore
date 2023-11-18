@@ -26,3 +26,7 @@ hs_err_pid*
 .vscode/
 bin/
 lib/
+/SimpleWget/wget/nbproject/private/
+/SimpleWget/UserArgument/nbproject/private/
+/SimpleWget/UserArgument/build/
+/SimpleWget/UserArgument/dist/
